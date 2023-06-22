@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Recruitment System</title>
+</head>
+<body>
+    
+    <h1>Welcome to the Employee Recruitment System</h1>
+    <h1>Candidate List</h1>
+    <form action="{{ url_for('submit') }}" method="POST">
+        
+       
+    </form>
+
+   
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Experience</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{ i[1] }}</td>
+            <td>{{i[2] }}</td>
+            <td>{{ i[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
